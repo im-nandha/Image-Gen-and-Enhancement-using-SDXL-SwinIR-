@@ -32,4 +32,47 @@ The pipeline first generates an image from text with SDXL, then uses SwinIR to e
 ---
 
 ## Project Structure
+sd_swinir_project/
+├── models/
+│ ├── stable_diffusion_xl.py # SDXL architecture & generation code
+│ └── swinir.py # SwinIR model definition
+├── utils/
+│ ├── scheduler.py # (Optional) LR schedulers
+│ └── metrics.py # PSNR, SSIM, FID metrics
+├── train_combined.py # Fine-tune SwinIR on SDXL outputs
+├── inference.py # Combined SDXL + SwinIR inference script
+├── config.yaml # Configuration file
+├── requirements.txt # Python dependencies
+└── README.md # This file
+
+
+---
+
+## Requirements
+
+- Python 3.8 or higher
+- PyTorch 1.12+
+- torchvision
+- timm
+- Pillow
+- numpy
+
+
+## Usage
+Inference
+Generate and enhance an image from a text prompt:
+
+python inference.py
+
+Output image saved as combined_output.png.
+
+## Training SwinIR on SDXL Outputs
+Fine-tune SwinIR to better enhance SDXL-generated images:
+python train_combined.py
+Fine-tuned weights saved as swinir_finetuned.pth.
+
+
+
+
+
 
