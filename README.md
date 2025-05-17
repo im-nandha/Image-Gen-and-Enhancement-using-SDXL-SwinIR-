@@ -72,6 +72,20 @@ Fine-tune SwinIR to better enhance SDXL-generated images:
 python train_combined.py
 Fine-tuned weights saved as swinir_finetuned.pth.
 
+## Customization
+Replace the placeholder generate() method in models/stable_diffusion_xl.py with your full SDXL implementation.
+
+Modify image sizes in inference.py and train_combined.py to match your hardware and dataset.
+
+Add your own datasets and data loaders for realistic training.
+
+## Notes
+SDXL code is a minimal placeholder. Integrate your own or open-source Stable Diffusion XL model for actual text-to-image generation.
+
+SwinIR expects fixed input sizes (default 64×64), so resizing is performed during inference and training.
+
+Extend evaluation scripts in utils/metrics.py to calculate PSNR, SSIM, and FID for quality assessment.
+
 
 
 
