@@ -32,6 +32,7 @@ The pipeline first generates an image from text with SDXL, then uses SwinIR to e
 ---
 
 ## Project Structure
+
 sd_swinir_project/
 ├── models/
 │ ├── stable_diffusion_xl.py # SDXL architecture & generation code
