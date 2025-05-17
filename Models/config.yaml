@@ -1,0 +1,11 @@
+model:
+  image_size: 256
+  batch_size: 4
+  learning_rate: 0.0001
+  epochs: 50
+  guidance_scale: 7.5
+
+paths:
+  dataset: "./your_dataset/"
+  save_dir: "./checkpoints/"
+  inference_prompt: "a cyclone striking a village"
